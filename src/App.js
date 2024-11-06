@@ -5,20 +5,20 @@ import { useState } from 'react';
 function App() {
   let[istatus,setistatus]=useState(false)
   let[menuStatus,setmenuStatus]=useState(false)
+
   return (
-    
     <div className='App'>
     <button className='micon' onClick={()=>setmenuStatus(!menuStatus)}>
       {
       menuStatus ? <span className='cross'>&times;</span> : <span> &#9776; </span>}</button>
     <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
     <ul>
-      <li>Home</li>  
-      <li>about</li> 
-      <li>Blog</li> 
-      <li>contact</li> 
-      <li>projects</li> 
-      <li>product</li>   
+      <li  onClick={()=>setmenuStatus()}>Home</li>  
+      <li onClick={()=>setmenuStatus()}>about</li> 
+      <li onClick={()=>setmenuStatus()}>Blog</li> 
+      <li  onClick={()=>setmenuStatus()}>contact</li> 
+      <li onClick={()=>setmenuStatus()}>projects</li> 
+      <li onClick={()=>setmenuStatus()}>product</li>   
     </ul>
     </div>
     
