@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+.input___page ,button {
+  margin: 10px 0px 0px 10px;
+  padding: 5px 10px 5px 10px;
+  background-color:red;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.menu {
+  background-color: #61dafb;
+   position: fixed;
+  align-items: center;
+  padding: 20px;
+  right: -100%;
+  width: 70%;
+  transition: 0.5s;
+  height: 100vh;
+
+}
+ul li {
+  list-style: none;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+.activeMenu {
+  right: 0%;
+}
+.micon
+ {
+  position: absolute;
+  right: 20px;
+  z-index: 10000;
+}
