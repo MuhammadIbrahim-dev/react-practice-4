@@ -1,16 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
   let[istatus,setistatus]=useState(false)
   let[menuStatus,setmenuStatus]=useState(false)
+  let[popupStatus,setpopupStatus]=useState(false)
 
   return (
     <div className='App'>
-    <button className='micon' onClick={()=>setmenuStatus(!menuStatus)}>
+      <button className='btnpopup' onClick={()=>{setpopupStatus(!popupStatus)}}>click me</button>
+      <div className={`popuplayer ${popupStatus ? 'popuplayeractive' : ''}`}></div>
+      <div className={`popup ${popupStatus ? 'popupactive' : ''}`}><button className='cross' onClick={()=> {setpopupStatus(!popupStatus)}}>&times;</button></div>
+
+    <button className='micon' onClick={()=>{setmenuStatus(!menuStatus)}}>
       {
-      menuStatus ? <span className='cross'>&times;</span> : <span> &#9776; </span>}</button>
+      menuStatus ? <span>&times;</span> : <span> &#9776; </span>}</button>
     <div className={`menu ${menuStatus ? 'activeMenu' : ''}`}>
     <ul>
       <li  onClick={()=>setmenuStatus()}>Home</li>  

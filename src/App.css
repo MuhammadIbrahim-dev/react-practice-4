@@ -36,6 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.input___page {
+  width: 35%;
+}
 .input___page ,button {
   margin: 10px 0px 0px 10px;
   padding: 5px 10px 5px 10px;
@@ -51,7 +54,7 @@
   right: -100%;
   text-align: left;
   padding: 0;
-  width: 30%;
+  width: 40%;
   transition: 0.5s;
   height: 100vh;
 
@@ -90,5 +93,42 @@ li:hover{
  {
   position: absolute;
   right: 20px;
-  z-index: 10000;
+  z-index: 1000;
+}
+.btnpopup {
+  position: absolute;
+  padding: 10px;
+
+  left: 2px;
+}
+.popuplayer {
+width: 100%;
+height: 100vh;
+display: none;
+ top: 30%;
+ left: 15%; 
+ background: rgba(0,0,0, 0.6);
+
+}
+.popup {
+width: 300px;
+height: 400px;
+background-color: #fff;
+position: absolute;
+top: -100%;
+transition: 0.3s ;
+transform: scale(0.2);
+}
+.popupactive {
+  top: 30%;
+  left: 12%;
+  transform: scale(1);
+}
+.popuplayeractive {
+display: block;
+}
+
+.cross {
+  position: absolute;
+  right: 30px;
 }
